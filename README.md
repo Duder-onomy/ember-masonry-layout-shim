@@ -1,7 +1,7 @@
 ember-masonry
 ==============================================================================
 
-[Short description of the addon.]
+All this does (right now) is conditionally inject the masonry source into your ember app (if you are not in fastboot).
 
 Installation
 ------------------------------------------------------------------------------
