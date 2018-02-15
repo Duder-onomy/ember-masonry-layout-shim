@@ -1,6 +1,8 @@
 ember-masonry-layout-shim
 ==============================================================================
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Duder-onomy/ember-masonry-layout-shim.svg)](https://greenkeeper.io/)
+
 [![Build Status](https://travis-ci.org/Duder-onomy/ember-masonry-layout-shim.svg?branch=master)](https://travis-ci.org/Duder-onomy/ember-masonry-layout-shim)
 
 This shims the world famous [Masonry-Layout](https://www.npmjs.com/package/masonry-layout);
