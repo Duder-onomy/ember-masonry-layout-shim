@@ -1,21 +1,24 @@
-ember-masonry
+ember-masonry-layout-shim
 ==============================================================================
 
-All this does (right now) is conditionally inject the masonry source into your ember app (if you are not in fastboot).
+This shims the world famous [Masonry-Layout](https://www.npmjs.com/package/masonry-layout);
+[Example](https://masonry.desandro.com/);
+
 
 Installation
 ------------------------------------------------------------------------------
 
 ```
-ember install ember-masonry
+ember install ember-masonry-layout-shim
 ```
 
 
 Usage
 ------------------------------------------------------------------------------
 
-[Longer description of how to use the addon in apps.]
-
+```javascript
+import Masonry from 'masonry';
+```
 
 Contributing
 ------------------------------------------------------------------------------
@@ -23,7 +26,7 @@ Contributing
 ### Installation
 
 * `git clone <repository-url>`
-* `cd ember-masonry`
+* `cd ember-masonry-layout-shim`
 * `npm install`
 
 ### Linting

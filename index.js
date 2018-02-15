@@ -2,42 +2,42 @@
 
 const mergeTrees = require('broccoli-merge-trees');
 const path = require('path');
-const funnel = require('broccoli-funnel');
-const UnwatchedDir = require('broccoli-source').UnwatchedDir;
-const map = require('broccoli-stew').map;
+const Funnel = require('broccoli-funnel');
+const fastbootTransform = require('fastboot-transform');
 const resolve = require('resolve');
 
 module.exports = {
-  name: 'ember-masonry',
+  name: 'ember-masonry-layout-shim',
 
-  treeForVendor(vendorTree) {
+  treeForVendor(existingTree) {
     let trees = [];
 
-    if (vendorTree) {
-      trees.push(vendorTree);
+    if (existingTree) {
+      trees.push(existingTree);
     }
 
-    trees.push(
-      funnel(this.masonryJs, {
-        destDir: 'masonry-layout',
-        include: [new RegExp(/\.js$/)],
-        exclude: ['tests', 'ender', 'package'].map(
-          key => new RegExp(key + '.js$')
-        )
-      })
-    );
+    let masonryPath = path.join(path.dirname(
+      resolve.sync('masonry-layout', { basedir: this.project.root })
+    ), 'dist');
 
-    return map(
-      mergeTrees(trees),
-      content => `if (typeof FastBoot === 'undefined') { ${content} }`
-    );
+    masonryPath = fastbootTransform(new Funnel(masonryPath, {
+      files: ['masonry.pkgd.min.js'],
+      destDir: 'masonry-layout'
+    }));
+
+    trees.push(masonryPath);
+
+    return new mergeTrees(trees);
   },
 
   included() {
     this._super(arguments);
-    this.masonryJs = new UnwatchedDir(path.dirname(
-      resolve.sync('masonry-layout', { basedir: this.project.root })
-    ));
-    this.import('vendor/masonry-layout/masonry.js');
+    this.import('vendor/masonry-layout/masonry.pkgd.min.js');
+
+    this.import('vendor/masonry-shim.js', {
+      exports: {
+        masonry: ['default']
+      }
+    });
   },
 };
