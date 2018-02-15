@@ -19,7 +19,7 @@ module.exports = {
 
     trees.push(
       funnel(this.masonryJs, {
-        destDir: 'masonry',
+        destDir: 'masonry-layout',
         include: [new RegExp(/\.js$/)],
         exclude: ['tests', 'ender', 'package'].map(
           key => new RegExp(key + '.js$')
@@ -36,8 +36,8 @@ module.exports = {
   included() {
     this._super(arguments);
     this.masonryJs = new UnwatchedDir(path.dirname(
-      resolve.sync('masonry', { basedir: this.project.root })
+      resolve.sync('masonry-layout', { basedir: this.project.root })
     ));
-    this.import('vendor/masonry/masonry.js');
+    this.import('vendor/masonry-layout/masonry.js');
   },
 };
