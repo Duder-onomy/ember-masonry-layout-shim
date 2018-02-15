@@ -22,6 +22,9 @@ Usage
 import Masonry from 'masonry';
 ```
 
+Follow the docs for 'vanilla js' (here)[https://github.com/desandro/masonry#initialize];
+
+
 Contributing
 ------------------------------------------------------------------------------
 
