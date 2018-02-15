@@ -1,6 +1,8 @@
 ember-masonry-layout-shim
 ==============================================================================
 
+[![Build Status](https://travis-ci.org/Duder-onomy/ember-masonry-layout-shim.svg?branch=master)](https://travis-ci.org/Duder-onomy/ember-masonry-layout-shim)
+
 This shims the world famous [Masonry-Layout](https://www.npmjs.com/package/masonry-layout);
 [Example](https://masonry.desandro.com/);
 

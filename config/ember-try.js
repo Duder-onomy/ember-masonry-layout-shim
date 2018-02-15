@@ -9,15 +9,9 @@ module.exports = function() {
     getChannelURL('canary'),
   ]).then((urls) => {
     return {
+      useYarn: true,
+      useVersionCompatibility: true,
       scenarios: [
-        {
-          name: 'ember-lts-2.12',
-          npm: {
-            devDependencies: {
-              'ember-source': '~2.12.0'
-            }
-          }
-        },
         {
           name: 'ember-lts-2.16',
           npm: {
