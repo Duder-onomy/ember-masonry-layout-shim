@@ -20,7 +20,7 @@
     "test:all": "ember try:testall"
   },
   "dependencies": {
-    "broccoli-merge-trees": "^2.0.0",
+    "broccoli-merge-trees": "^3.0.0",
     "ember-cli-babel": "^6.6.0",
     "fastboot-transform": "^0.1.2",
     "masonry-layout": "^4.2.0"
