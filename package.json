@@ -1,6 +1,6 @@
 {
   "name": "ember-masonry-layout-shim",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Shims masonry-layout form ember cli apps",
   "keywords": [
     "ember-addon"
