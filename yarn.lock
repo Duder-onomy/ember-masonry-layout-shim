@@ -2953,7 +2953,7 @@ ember-cli-babel@^6.16.0:
     ember-cli-version-checker "^2.1.2"
     semver "^5.5.0"
 
-ember-cli-babel@^7.1.2:
+ember-cli-babel@^7.0.0, ember-cli-babel@^7.1.2:
   version "7.1.2"
   resolved "https://registry.yarnpkg.com/ember-cli-babel/-/ember-cli-babel-7.1.2.tgz#543c64368d6138d12656db1143c02df1f2b0ee9c"
   dependencies:
@@ -3247,11 +3247,11 @@ ember-fastboot-addon-tests@^0.5.0:
     request "^2.85.0"
     rsvp "^4.8.2"
 
-ember-load-initializers@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/ember-load-initializers/-/ember-load-initializers-1.0.0.tgz#4919eaf06f6dfeca7e134633d8c05a6c9921e6e7"
+ember-load-initializers@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/ember-load-initializers/-/ember-load-initializers-2.0.0.tgz#d4b3108dd14edb0f9dc3735553cc96dadd8a80cb"
   dependencies:
-    ember-cli-babel "^6.0.0-beta.7"
+    ember-cli-babel "^7.0.0"
 
 ember-maybe-import-regenerator@^0.1.6:
   version "0.1.6"
